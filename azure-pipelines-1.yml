@@ -1,7 +1,5 @@
 # HTML
-- task: CmdLine@2
-  inputs:
-    script: 
+
 # Archive your static HTML project and save it with the build record.
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
@@ -18,4 +16,7 @@ steps:
     rootFolderOrFile: '$(build.sourcesDirectory)'
     includeRootFolder: false
 - task: PublishBuildArtifacts@1
-- script python -mhtmllib "a.html"
+- script 
+- task: CmdLine@2
+  inputs:
+    script: python -mhtmllib "a.html"
